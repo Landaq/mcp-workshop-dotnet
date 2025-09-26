@@ -24,7 +24,7 @@ public static class MonkeyHelper
     public static async Task LoadMonkeysAsync()
     {
         // MCP 서버 API 엔드포인트 예시
-        var url = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/monkeydata.json";
+        var url = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/MonkeysApp/monkeydata.json";
         using var httpClient = new HttpClient();
         var json = await httpClient.GetStringAsync(url);
         var data = JsonSerializer.Deserialize<List<Monkey>>(json);
